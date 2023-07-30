@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import '@/app/styles/globals.css';
+
+type Children = {
+	children: ReactNode;
+};
 
 export const metadata: Metadata = {
 	icons: {
@@ -11,7 +15,7 @@ export const metadata: Metadata = {
 	description: 'Starter template for Next.JS projects using TypeScript and Tailwind CSS.',
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: Children) {
 	return (
 		<html lang="en">
 			<body className="scroll-smooth font-ubuntu antialiased">
