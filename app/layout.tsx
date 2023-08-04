@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
 import type { Metadata } from 'next';
+import { ClerkProvider } from '@clerk/nextjs';
 import '@/app/styles/globals.css';
 
 type Children = {
@@ -11,20 +12,22 @@ export const metadata: Metadata = {
 		icon: '/favicon.png',
 		shortcut: '/favicon/png',
 	},
-	title: 'Next.JS Starter Template App',
-	description: 'Starter template for Next.JS projects using TypeScript and Tailwind CSS.',
+	title: 'Next.JS + Clerk Auth App',
+	description: 'Next.JS application that uses Clerk for authentication and user management.',
 };
 
 export default function RootLayout({ children }: Children) {
 	return (
-		<html lang="en">
-			<body className="scroll-smooth font-ubuntu antialiased">
-				<header>Header Section</header>
+		<ClerkProvider>
+			<html lang="en">
+				<body className="scroll-smooth font-ubuntu antialiased">
+					<header>Header Section</header>
 
-				<main>{children}</main>
+					<main>{children}</main>
 
-				<footer>Footer Section</footer>
-			</body>
-		</html>
+					<footer>Footer Section</footer>
+				</body>
+			</html>
+		</ClerkProvider>
 	);
 }
