@@ -12,7 +12,7 @@ module.exports = {
 			center: true,
 		},
 		fontFamily: {
-			ubuntu: 'Ubuntu, san-serif',
+			opensans: "'Open Sans', sans-serif",
 		},
 	},
 	plugins: [],
