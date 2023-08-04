@@ -3,7 +3,13 @@ import { SignUp } from '@clerk/nextjs';
 const SignUpPage = () => {
 	return (
 		<>
-			<SignUp />
+			<SignUp
+				appearance={{
+					elements: {
+						formButtonPrimary: 'bg-sky-800',
+					},
+				}}
+			/>
 		</>
 	);
 };

@@ -13,13 +13,29 @@ const Header = () => {
 			</div>
 
 			<div className="flex items-center text-white">
-				<Link href="sign-in" className="text-gray-300 hover:text-white mr-4">
-					Sign In
-				</Link>
+				{!userId && (
+					<>
+						<Link href="sign-in" className="text-gray-300 hover:text-white mr-4">
+							Sign In
+						</Link>
 
-				<Link href="sign-up" className="text-gray-300 hover:text-white mr-4">
-					Sign Up
-				</Link>
+						<Link href="sign-up" className="text-gray-300 hover:text-white mr-4">
+							Sign Up
+						</Link>
+					</>
+				)}
+
+				{userId && (
+					<>
+						{/* <Link href="profile" className="text-gray-300 hover:text-white mr-4">
+							Profile
+						</Link> */}
+
+						<div className="ml-auto">
+							<UserButton afterSignOutUrl="/" />
+						</div>
+					</>
+				)}
 			</div>
 		</nav>
 	);
