@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { ClerkProvider } from '@clerk/nextjs';
+import Header from '@/components/header';
 import '@/app/styles/globals.css';
 
 type Children = {
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
 		icon: '/favicon.png',
 		shortcut: '/favicon/png',
 	},
-	title: 'Next.JS + Clerk Auth App',
+	title: 'Next.JS + Clerk Auth',
 	description: 'Next.JS application that uses Clerk for authentication and user management.',
 };
 
@@ -21,11 +22,15 @@ export default function RootLayout({ children }: Children) {
 		<ClerkProvider>
 			<html lang="en">
 				<body className="scroll-smooth font-ubuntu antialiased">
-					<header>Header Section</header>
+					<header>
+						<Header />
+					</header>
 
-					<main>{children}</main>
-
-					<footer>Footer Section</footer>
+					<main className="container mx-auto">
+						<div className="flex items-start justify-center min-h-screen">
+							<div className="mt-20">{children}</div>
+						</div>
+					</main>
 				</body>
 			</html>
 		</ClerkProvider>

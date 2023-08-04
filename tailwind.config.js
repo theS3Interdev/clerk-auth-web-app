@@ -8,6 +8,9 @@ module.exports = {
 	],
 	theme: {
 		extend: {},
+		container: {
+			center: true,
+		},
 		fontFamily: {
 			ubuntu: 'Ubuntu, san-serif',
 		},
