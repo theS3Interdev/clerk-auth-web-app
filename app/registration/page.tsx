@@ -24,9 +24,9 @@ const RegistrationPage = () => {
 
 		try {
 			await signUp.create({
-				first_name: firstName,
-				last_name: lastName,
-				email_address: email,
+				firstName: firstName,
+				lastName: lastName,
+				emailAddress: email,
 				password,
 			});
 
@@ -75,13 +75,13 @@ const RegistrationPage = () => {
 			{!pendingVerification && (
 				<form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
 					<div>
-						<label htmlFor="first_name" className="block mb-2 text-sm font-medium">
+						<label htmlFor="firstName" className="block mb-2 text-sm font-medium">
 							First Name
 						</label>
 						<input
 							type="text"
-							name="first_name"
-							id="first_name"
+							name="firstName"
+							id="firstName"
 							onChange={(e) => setFirstName(e.target.value)}
 							className="bg-gray-50 border border-gray-300 sm:text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5"
 							required={true}
@@ -89,13 +89,13 @@ const RegistrationPage = () => {
 					</div>
 
 					<div>
-						<label htmlFor="last_name" className="block mb-2 text-sm font-medium">
+						<label htmlFor="lastName" className="block mb-2 text-sm font-medium">
 							Last Name
 						</label>
 						<input
 							type="text"
-							name="last_name"
-							id="last_name"
+							name="lastName"
+							id="lastName"
 							onChange={(e) => setLastName(e.target.value)}
 							className="bg-gray-50 border border-gray-300 sm:text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5"
 							required={true}
