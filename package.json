@@ -9,11 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@clerk/nextjs": "^4.25.3",
-    "@types/node": "20.8.4",
-    "@types/react": "18.2.28",
-    "@types/react-dom": "18.2.13",
-    "next": "13.5.4",
+    "@clerk/nextjs": "^4.26.1",
+    "@types/node": "20.8.9",
+    "@types/react": "18.2.33",
+    "@types/react-dom": "18.2.14",
+    "next": "14.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
@@ -23,8 +23,8 @@
     "autoprefixer": "10.4.16",
     "postcss": "8.4.31",
     "prettier": "^3.0.3",
-    "prettier-plugin-tailwindcss": "^0.5.5",
-    "tailwindcss": "3.3.3",
+    "prettier-plugin-tailwindcss": "^0.5.6",
+    "tailwindcss": "3.3.5",
     "typescript": "5.2.2"
   }
 }
