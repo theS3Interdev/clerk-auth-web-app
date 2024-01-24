@@ -9,10 +9,6 @@ type Children = {
 };
 
 export const metadata: Metadata = {
-  icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon/png",
-  },
   title: "Clerk Auth",
   description:
     "Next.JS application that uses Clerk for authentication and user management.",
